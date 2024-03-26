@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="fa">
+    <head>
+        <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="./assets/css/bootstrap-rtl.min.css" rel="stylesheet" />
+        <link href="./assets/css/vazir.css" rel="stylesheet" />
+        <link href="./assets/css/style.css?v1.4" rel="stylesheet" />
+        <title>IRCF | کانفیگ رایگان</title>
+        <meta name="description" content="دریافت کانفیگ‌های رایگان v2ray بر اساس لوکیشن" />
+        <meta name="keywords" content="کلودفلر, کلادفلر, cloudflare, cf, آی پی تمیز, آی پی سالم, اسکن آی پی" />
+        <meta name="robots" content="index,follow,noodp" />
+        <meta name="googlebot" content="index,follow" />
+        <meta name="theme-color" content="#ff7900" />
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" type="image/x-icon" href="./assets/favicon.ico?v1.1" />
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse">
+            <div class="container">
+                <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 col-centered">
+                    <a href=".">
+                        <img src="./assets/img/cflogo.png?v1.1" alt="logo" />
+                        <h1>اینترنت برای همه؛ یا هیچ‌کس!</h1>
+                    </a>
+                </div>
+            </div>
+        </nav>
+        <div class="clearfix"></div>
+        <div class="container">
+            <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 col-centered">
+                <ul class="nav nav-tabs">
+                    <li>
+                        <a href="https://ircf.space">معرفی</a>
+                    </li>
+                    <li class="active"><a href="./index.html">کانفیگ رایگان</a></li>
+                    <li class="pull-left">
+                        <a href="https://ircf.space/contacts.php">تماس‌باما</a>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+                <div class="alert alert-info" id="defAlert">
+                    <p>توسط این‌ابزار می‌تونین به کانفیگ‌های رایگان گردآوری‌شده از طریق <a href="https://github.com/yebekhe/TVC" target="_blank">TVC</a> بر اساس لوکیشن دلخواه دسترسی داشته باشین. این‌کانفیگ‌ها به‌صورت خودکار و منظم، بدون دخل‌وتصرف از یه‌سری <a href="https://raw.githubusercontent.com/yebekhe/TVC/main/channelsData/channelsAssets.json" target="_blank">کانال تلگرامی</a> جمع‌آوری میشن و برای رعایت مسائل امنیتی توصیه میشه تنها برای مصارف عادی ازشون استفاده کنین.</p>
+                </div>
+                <div class="customer-logos slider" id="countryLoc">
+                    <a href="" data-loc="ir">
+                        <div class="slide">
+                            <img src="./assets/img/flags/ir.svg" alt="IR" />
+                            <p dir="auto">ایران</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="ae">
+                        <div class="slide">
+                            <img src="./assets/img/flags/ae.svg" alt="AE" />
+                            <p dir="auto">امارات</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="at">
+                        <div class="slide">
+                            <img src="./assets/img/flags/at.svg" alt="AT" />
+                            <p dir="auto">اتریش</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="ca">
+                        <div class="slide">
+                            <img src="./assets/img/flags/ca.svg" alt="CA" />
+                            <p dir="auto">کانادا</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="ch">
+                        <div class="slide">
+                            <img src="./assets/img/flags/ch.svg" alt="CH" />
+                            <p dir="auto">سوئیس</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="cn">
+                        <div class="slide">
+                            <img src="./assets/img/flags/cn.svg" alt="CN" />
+                            <p dir="auto">چین</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="cr">
+                        <div class="slide">
+                            <img src="./assets/img/flags/cr.svg" alt="CR" />
+                            <p dir="auto">کاستاریکا</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="cz">
+                        <div class="slide">
+                            <img src="./assets/img/flags/cz.svg" alt="CZ" />
+                            <p dir="auto">جمهوری چک</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="de">
+                        <div class="slide">
+                            <img src="./assets/img/flags/de.svg" alt="DE" />
+                            <p dir="auto">آلمان</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="fi">
+                        <div class="slide">
+                            <img src="./assets/img/flags/fi.svg" alt="FI" />
+                            <p dir="auto">فنلاند</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="fr">
+                        <div class="slide">
+                            <img src="./assets/img/flags/fr.svg" alt="FR" />
+                            <p dir="auto">فرانسه</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="gb">
+                        <div class="slide">
+                            <img src="./assets/img/flags/gb.svg" alt="GB" />
+                            <p dir="auto">انگلیس</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="hk">
+                        <div class="slide">
+                            <img src="./assets/img/flags/hk.svg" alt="HK" />
+                            <p dir="auto">هنگ کنگ</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="ie">
+                        <div class="slide">
+                            <img src="./assets/img/flags/ie.svg" alt="IE" />
+                            <p dir="auto">ایرلند</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="in">
+                        <div class="slide">
+                            <img src="./assets/img/flags/in.svg" alt="IN" />
+                            <p dir="auto">هند</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="jp">
+                        <div class="slide">
+                            <img src="./assets/img/flags/jp.svg" alt="JP" />
+                            <p dir="auto">ژاپن</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="nl">
+                        <div class="slide">
+                            <img src="./assets/img/flags/nl.svg" alt="NL" />
+                            <p dir="auto">هلند</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="pl">
+                        <div class="slide">
+                            <img src="./assets/img/flags/pl.svg" alt="PL" />
+                            <p dir="auto">لهستان</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="ru">
+                        <div class="slide">
+                            <img src="./assets/img/flags/ru.svg" alt="RU" />
+                            <p dir="auto">روسیه</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="se">
+                        <div class="slide">
+                            <img src="./assets/img/flags/se.svg" alt="SE" />
+                            <p dir="auto">سوئد</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="us">
+                        <div class="slide">
+                            <img src="./assets/img/flags/us.svg" alt="US" />
+                            <p dir="auto">امریکا</p>
+                        </div>
+                    </a>
+                    <a href="" data-loc="za">
+                        <div class="slide">
+                            <img src="./assets/img/flags/za.svg" alt="ZA" />
+                            <p dir="auto">آفریقا</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="clearfix"></div>
+                <div id="donate" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">دونیت</h4>
+                            </div>
+                            <div class="modal-body modalBodyOverflow">
+                                <p>درصورت تمایل برای دونیت می‌تونین از یکی‌از روش‌های زیر استفاده کنین:</p>
+                                <div class="dirLeft">
+                                    <small>Buy me a coffee:</small>
+                                    <br>
+                                    <a href="https://buymeacoffee.com/ircf" class="btn btn-default btn-block" target="_blank">buymeacoffee.com/ircf</a>
+                                    <br>
+                                    <small>Tether (TRC20):</small>
+                                    <br>
+                                    <input type="text" class="form-control text-center" value="TF5cT8fQMuajHGGH141U9JbTygFojkrFdB" />
+                                    <br>
+                                    <small>Bitcoin:</small>
+                                    <br>
+                                    <input type="text" class="form-control text-center" value="bc1qyhx0qn9722vdvlz4s64g4sxq3yne0f5ryz3jyd" />
+                                    <br>
+                                    <small>Tron (TRX):</small>
+                                    <br>
+                                    <input type="text" class="form-control text-center" value="TF5cT8fQMuajHGGH141U9JbTygFojkrFdB" />
+                                    <br>
+                                    <small>Ethereum:</small>
+                                    <br>
+                                    <input type="text" class="form-control text-center" value="0x2A72777912A15A6387a1116f9bDDFe1Cb9474BF1" />
+									<br>
+                                    <small>Litecoin:</small>
+                                    <br>
+                                    <input type="text" class="form-control text-center" value="ltc1q5d4u366xef336pjvccn7akn02upavmk45fhtdw" />
+                                    <br>
+									<small>TON (ERC20):</small>
+									<br>
+									<input type="text" class="form-control text-center" value="0x2A72777912A15A6387a1116f9bDDFe1Cb9474BF1" />
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">حله</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="qrModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title dirLeft">QRCode</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="qrcode" id="qrcode">
+                                    <a href="javascript:;" id="copyFromQR">
+                                        <img src="" alt="qrcode" />
+                                    </a>
+                                    <input id="subUrl" class="form-control dirLeft" value="" />
+                                </div>
+                                <div class="alert alert-warning">بعد از اسکن کد کیوآر ممکنه توی بعضی‌از اپ‌ها به انجام «بروزرسانی اشتراک» نیاز باشه.</div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" id="copyUrl">کپی آدرس</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <p class="text-center">
+                        © توسط
+                        <a href="https://github.com/ircfspace/location" target="_blank">IRCF</a>،
+                        به کمک
+                        <a href="https://github.com/yebekhe/TVC" target="_blank">YeBeKhe</a>
+                        <br />
+                        <span dir="ltr">
+                            <a class="github-button" href="https://github.com/ircfspace/location" data-color-scheme="no-preference: light; light: light; dark: dark;" data-icon="octicon-star" data-show-count="true" aria-label="Star ircfspace/location on GitHub">Star</a>
+                        </span>
+                    </p>
+                    <!--<div class="text-center">
+                        <a href="#" class="btn btn-link btn-normal btn-lg btn-outline donateLink" data-toggle="modal" data-target="#donate">☕</a>
+                    </div>-->
+                    <script src="./assets/js/jquery.min.js"></script>
+                    <script src="./assets/js/bootstrap.min.js"></script>
+                    <script src="./assets/js/script.js?v1.4"></script>
+                    <script async defer src="https://buttons.github.io/buttons.js"></script>
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

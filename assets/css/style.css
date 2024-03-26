@@ -315,6 +315,38 @@ img[alt="loader"] {
     color: #ff7900;
 }
 
+.grid {
+    float: right;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.box {
+    height: 100px;
+    width: calc(20% - 10px);
+    float: right;
+    border-radius: 7px;
+    margin: 0 5px;
+}
+.shimmerBG {
+    animation-duration: 2.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background: #ddd;
+    background: linear-gradient(to right, #f6f6f6 8%, #f0f0f0 18%, #f6f6f6 33%);
+    background-size: 1200px 100%;
+}
+@keyframes shimmer {
+    0% {
+        background-position: -1200px 0;
+    }
+
+    100% {
+        background-position: 1200px 0;
+    }
+}
+
 footer {
 	padding: 10px 0;
 	/*position: fixed;
@@ -350,6 +382,9 @@ footer p {
     .slider a {
         width: calc(100% / 5);
     }
+    .box {
+        height: 70px;
+    }
 }
 
 @media(max-width:500px) {
@@ -366,5 +401,8 @@ footer p {
 	}
     .slider a {
         width: calc(100% / 4);
+    }
+    .box {
+        height: 50px;
     }
 }

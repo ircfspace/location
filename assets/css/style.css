@@ -282,12 +282,11 @@ img[alt="loader"] {
     border: 3px solid transparent;
     border-radius: 10px;
     padding: 5px;
+    -webkit-transition: .2s;
+    transition: .2s;
 }
-.slider img {
-    float: right;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+.slider a:hover {
+    border-color: #ccc;
 }
 .slider a.active {
     border-color: #ff7900;
@@ -298,6 +297,12 @@ img[alt="loader"] {
     border-color: transparent;
     background: transparent;
     cursor: default;
+}
+.slider img {
+    float: right;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 .slider p {
     float: right;

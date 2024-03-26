@@ -25,3 +25,28 @@ $(document).on('click', 'a[data-loc]', function (e) {
 $('#qrModal').on('hidden.bs.modal', function () {
     $('#countryLoc a').removeClass('active');
 });
+
+window.addEventListener('load', function() {
+    fetch('https://api.github.com/repos/yebekhe/TVC/contents/subscriptions/location/normal')
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            let locationPaths = data.filter(item => !item.path.includes("XX"));
+            locationPaths = locationPaths.map(item => item.name);
+            let html = '';
+            locationPaths.forEach(function(element) {
+                html += '<a href="" data-loc="'+element.toLowerCase()+'">';
+                html += '<div class="slide">';
+                html += '<img src="./assets/img/flags/'+element.toLowerCase()+'.svg?v1.1" alt="'+element+'" />';
+                html += '<p dir="auto">'+element+'</p>';
+                html += '</div>';
+                html += '</a>';
+            });
+            $('#countryLoc').html(html);
+        });
+    
+});

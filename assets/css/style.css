@@ -293,6 +293,12 @@ img[alt="loader"] {
     border-color: #ff7900;
     background: #fffdfb;
 }
+.slider a.deactive {
+    opacity: 0.2;
+    border-color: transparent;
+    background: transparent;
+    cursor: default;
+}
 .slider p {
     float: right;
     width: 100%;

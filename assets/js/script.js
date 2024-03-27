@@ -26,39 +26,41 @@ $('#qrModal').on('hidden.bs.modal', function () {
     $('#countryLoc a').removeClass('active');
 });
 
+function renderLocationData(locationPaths) {
+    let html = '';
+    locationPaths.forEach(function(element) {
+        html += '<a href="" data-loc="'+element.toLowerCase()+'">';
+        html += '<div class="slide">';
+        html += '<img src="./assets/img/flags/'+element.toLowerCase()+'.svg?v1.1" alt="'+element+'" />';
+        html += '<p dir="auto">'+element+'</p>';
+        html += '</div>';
+        html += '</a>';
+    });
+    $('#countryLoc').html(html);
+}
+
 window.addEventListener('load', function() {
-    fetch('https://api.github.com/repos/yebekhe/TVC/contents/subscriptions/location/normal')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            let locationPaths = data.filter(item => !item.path.includes("XX"));
-            locationPaths = locationPaths.map(item => item.name);
-            let html = '';
-            locationPaths.forEach(function(element) {
-                html += '<a href="" data-loc="'+element.toLowerCase()+'">';
-                html += '<div class="slide">';
-                html += '<img src="./assets/img/flags/'+element.toLowerCase()+'.svg?v1.1" alt="'+element+'" />';
-                html += '<p dir="auto">'+element+'</p>';
-                html += '</div>';
-                html += '</a>';
+    const cachedData = localStorage.getItem('locationData');
+    const cachedTime = localStorage.getItem('locationDataTime');
+    if (cachedData !== "undefined" && cachedTime !== "undefined" && (Date.now() - cachedTime < 15 * 60 * 1000)) {
+        renderLocationData(cachedData.split(','));
+    } else {
+        fetch('https://api.github.com/repos/yebekhe/TVC/contents/subscriptions/location/normal')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                let locationPaths = data.filter(item => !item.path.includes("XX"));
+                locationPaths = locationPaths.map(item => item.name);
+                localStorage.setItem('locationData', locationPaths);
+                localStorage.setItem('locationDataTime', Date.now());
+                renderLocationData(locationPaths);
+            })
+            .catch(error => {
+                renderLocationData(["IR", "TR", "GB", "US", "PL", "FI", "SE", "DE", "FR"]);
             });
-            $('#countryLoc').html(html);
-        })
-        .catch(error => {
-            let html = '';
-            let locationPaths = ["IR", "TR", "GB", "US", "PL", "FI", "SE", "DE", "FR"];
-            locationPaths.forEach(function(element) {
-                html += '<a href="" data-loc="'+element.toLowerCase()+'">';
-                html += '<div class="slide">';
-                html += '<img src="./assets/img/flags/'+element.toLowerCase()+'.svg?v1.1" alt="'+element+'" />';
-                html += '<p dir="auto">'+element+'</p>';
-                html += '</div>';
-                html += '</a>';
-            });
-            $('#countryLoc').html(html);
-        });
+    }
 });

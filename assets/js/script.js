@@ -53,7 +53,7 @@ window.addEventListener('load', function() {
                 return response.json();
             })
             .then(data => {
-                let locationPaths = data.filter(item => !item.path.includes("XX"));
+                let locationPaths = data.filter(item => !item.path.includes("XX") && !item.path.includes("CF"));
                 locationPaths = locationPaths.map(item => item.name);
                 localStorage.setItem('locationData', locationPaths);
                 localStorage.setItem('locationDataTime', Date.now());

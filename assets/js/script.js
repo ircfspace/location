@@ -37,7 +37,7 @@ function renderLocationData(locationPaths) {
         let countryCode = flagToCountryCode(element);
         html += '<a href="" data-loc="'+element.toLowerCase()+'">';
         html += '<div class="slide">';
-        html += '<img src="./assets/img/flags/'+countryCode+'.svg?v1.1" alt="'+element+'" />';
+        html += '<img src="./assets/img/flags/'+countryCode+'.svg?v1.2" alt="'+element+'" />';
         html += '<p dir="auto">'+countryCode.toUpperCase()+'</p>';
         html += '</div>';
         html += '</a>';

@@ -70,7 +70,8 @@ window.addEventListener('load', function() {
                 renderLocationData(locationPaths);
             })
             .catch(error => {
-                renderLocationData(["🇮🇷 IR", "🇹🇷 TR", "🇬🇧 GB", "🇺🇸 US", "🇵🇱 PL", "🇫🇮 FI", "🇸🇪 SE", "🇩🇪 DE", "🇫🇷 FR"]);
+                //renderLocationData(["🇮🇷 IR", "🇹🇷 TR", "🇬🇧 GB", "🇺🇸 US", "🇵🇱 PL", "🇫🇮 FI", "🇸🇪 SE", "🇩🇪 DE", "🇫🇷 FR"]);
+                renderLocationData(["ir", "tr", "gb", "us", "pl", "fi", "se", "de", "fr"]);
             });
     }
 });

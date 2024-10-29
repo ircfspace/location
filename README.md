@@ -10,7 +10,7 @@
 * برای رعایت مسائل امنیتی توصیه میشه تنها برای مصارف عادی ازشون استفاده کنین.
 
 دریافت نرم افزار موردنیاز :<br>
-https://ircf.space/software.php
+https://ircf.space/software
 
 آموزش استفاده :<br>
 https://youtube.com/watch?v=MNqsR8F6JWs&t=125s
